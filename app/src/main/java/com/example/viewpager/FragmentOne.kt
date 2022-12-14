@@ -21,7 +21,6 @@ class FragmentOne : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         image=view.findViewById(R.id.iv_imageview)
         image.setImageResource(R.drawable.download1)
-
     }
 
 }
