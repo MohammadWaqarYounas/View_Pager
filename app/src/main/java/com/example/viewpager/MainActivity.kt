@@ -1,10 +1,13 @@
 package com.example.viewpager
 
+import android.app.Activity
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.databinding.DataBindingUtil
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
@@ -23,6 +26,10 @@ class MainActivity : AppCompatActivity() {
         adaptor.addFragment(FragmentThree(),"Three")
         binding.viewpager.adapter=adaptor
         binding.tablayout.setupWithViewPager(binding.viewpager)
+
+
+        val context:Context=this
+        val activity:Activity=this
 
     }
 }
