@@ -13,8 +13,7 @@ import com.example.viewpager.R
 class RecyclerAdapter2(private val data: List<RecyclerModel>, private var onClick:(position:Int)->Unit) : Adapter<MyViewHolderTemp>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolderTemp {
-        val inflater = LayoutInflater.from(parent.context)
-        val view = inflater.inflate(R.layout.recylerviewitemdesign, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.recylerviewitemdesign, parent, false)
         return MyViewHolderTemp(view)
     }
     override fun onBindViewHolder(holder: MyViewHolderTemp, position: Int) {

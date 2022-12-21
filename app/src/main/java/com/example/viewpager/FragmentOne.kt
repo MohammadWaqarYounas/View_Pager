@@ -50,12 +50,9 @@ class FragmentOne : Fragment() ,MyInterface {
 
         val adapterPosition:Int
         myInterface=this
-        AdapterOne = RecyclerAdapter(listOfData,myInterface)
+        AdapterOne = RecyclerAdapter(populateData(),myInterface)
 
-        listAdapterTemp= RecyclerAdapter2(listOfData)
-
-
-        {
+        listAdapterTemp= RecyclerAdapter2(listOfData) {
             requireActivity().run {
             val intent=Intent(this,MainActivity2::class.java)
            // intent.putExtra("name","mansoor")
@@ -70,7 +67,7 @@ class FragmentOne : Fragment() ,MyInterface {
     fun populateData(): List<RecyclerModel> {
         val dataList = mutableListOf<RecyclerModel>()
 
-        for (i in 0..10) {
+        for (i in 0..10) {a
             var data = RecyclerModel("mansoor $i", "description $i", "Price $i")
             dataList.add(data)
         }

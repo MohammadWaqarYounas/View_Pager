@@ -14,6 +14,8 @@ import com.example.viewpager.R
 
 class RecyclerAdapter(val data: List<RecyclerModel>,val callback:MyInterface) : RecyclerView.Adapter<MyViewHolder>() {
 
+
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val view = inflater.inflate(R.layout.recylerviewitemdesign, parent, false)
@@ -35,7 +37,7 @@ class MyViewHolder(itemView:View) : ViewHolder(itemView) {
         price.text=data.price
 
         itemView.setOnClickListener{
-            Log.d("mansoor","${data.name}")
+           // Log.d("mansoor","${data.name}")
             val intent=Intent(itemView.context,MainActivity2::class.java)
             itemView.context.startActivity(intent)
             callback.recyclerCallBack(adapterPosition)

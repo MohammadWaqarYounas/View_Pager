@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -15,6 +16,9 @@ import com.example.viewpager.databinding.ActivityMainBinding
 import com.google.android.material.tabs.TabLayout
 
 class MainActivity : AppCompatActivity() {
+    private val galleryLaunch=registerForActivityResult(ActivityResultContracts.GetMultipleContents()){
+
+    }
     lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
